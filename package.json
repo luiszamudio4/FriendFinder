@@ -1,1 +1,22 @@
-{}
+{
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "friendfinder",
+  "description": "Find the perfect match",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luiszamudio4/FriendFinder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luiszamudio4/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/luiszamudio4/FriendFinder#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

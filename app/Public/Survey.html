@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Friend Finder</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Makes sure the width of uploaded photo fits within the modal -->
+    <style>
+        img {
+            max-width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron bg-info text-light mt-4">
+            <h1 class="text-center">Survey Questions</h1>
+            <hr>
+            <h3 class="text-center">Fill out the form to find your new friend.</h3>
+        </div>
+
+
+        <form method="POST" role="form">
+            <!-- First Section for Name and Email-->
+            <div class="form-group">
+                <h3>About You</h3>
+                <label for="name">Name (Required)</label>
+                <input type="text" class="form-control" id="name">
+                <label for="name">Link to Photo Image (Required)</label>
+                <input type="text" class="form-control" id="photo">
+            </div>
+
+            <hr>
+
+            <!-- Question Section-->
+            <div class="form-group">
+                <h4>Question 1</h4>
+                <label for="role">You are very organize</label>
+                <select class="form-control" id="question1">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <h4>Question 2</h4>
+                <label for="role">You are kind to others</label>
+                <select class="form-control" id="question2">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <h4>Question 3</h4>
+                <label for="role">Value other people's opinions</label>
+                <select class="form-control" id="question3">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <h4>Question 4</h4>
+                <label for="role">Have goals in life</label>
+                <select class="form-control" id="question4">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <h4>Question 5</h4>
+                <label for="role">Think that things happen for a reason</label>
+                <select class="form-control" id="question5">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <h4>Question 6</h4>
+                <label for="role">Likes sports</label>
+                <select class="form-control" id="question6">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <h4>Question 7</h4>
+                <label for="role">Enjoys the outdoors</label>
+                <select class="form-control" id="question7">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <h4>Question 8</h4>
+                <label for="role">Is very discipline</label>
+                <select class="form-control" id="question8">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <h4>Question 9</h4>
+                <label for="role">Has ate a cheeseburger</label>
+                <select class="form-control" id="question9">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <h4>Question 10</h4>
+                <label for="role">Would like to travel rather than watch tv</label>
+                <select class="form-control" id="question10">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <!-- Submit Button-->
+            
+            <button type="submit" id="submit" class="btn btn-danger btn-md">Submit</button>
+            
+
+        </form>
+
+    <!-- Links at bottom of the page -->
+    <hr>
+    <div>
+        <a href="/api/friends">
+        API Friends List 
+        </a>
+        |
+        <a href="https://github.com/luiszamudio4/FriendFinder" target="_blank">
+        GitHub Repo
+        </a>
+    </div>
+
+</div>
+
+    <!-- Modal -->
+    <div class="modal" id="display-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Your new friend is</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <h4>Name: <span id="match-name"></span></h4>
+                        <img id="match-img" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <script type="text/javascript">
+        // When user clicks submit, a new object containing their information is created.
+        $("#submit").on("click", function(event) {
+            event.preventDefault();
+            var entry = {
+                name: $("#name").val().trim(),
+                photo: $("#photo").val().trim(),
+                scores: [
+                    $("#question1").val(),
+                    $("#question2").val(),
+                    $("#question3").val(),
+                    $("#question4").val(),
+                    $("#question5").val(),
+                    $("#question6").val(),
+                    $("#question7").val(),
+                    $("#question8").val(),
+                    $("#question9").val(),
+                    $("#question10").val()
+                ]
+            }
+            // This variable is set to the URL of the window.
+            var currentURL = window.location.origin;
+            // AJAX request using the currentURL + the api route below. The user input (entry) is then run through 
+            // the POST method at the specified URL, and the data is received back to the user.
+            $.post(currentURL + "/api/friends", entry, function(data) {
+                console.log(data);
+                // Displays both the text and photo from the data and displays them on the page (in the modal).
+                $("#match-name").text(data.name);
+                $("#match-img").attr("src", data.photo);
+                // Modal functionality 
+                $("#display-modal").modal("toggle");
+            })
+            // Clear the form when submitting
+			$("#name").val("");
+			$("#photo").val("");
+			$("#question1").val("1");
+			$("#question2").val("1");
+			$("#question3").val("1");
+			$("#question4").val("1");
+			$("#question5").val("1");
+			$("#question6").val("1");
+			$("#question7").val("1");
+			$("#question8").val("1");
+			$("#question9").val("1");
+			$("#question10").val("1");
+        })
+    </script>
+</body>
+
+</html>
